@@ -187,7 +187,7 @@ GEM
     nokogiri (1.9.1)
       mini_portile2 (~> 2.4.0)
     orm_adapter (0.5.0)
-    pg (1.1.4)
+    pg (0.21.0)
     polyglot (0.3.5)
     pry (0.13.1)
       coderay (~> 1.1)
@@ -344,7 +344,7 @@ DEPENDENCIES
   jquery-ui-rails
   js-routes
   launchy
-  pg
+  pg (~> 0.11)
   quiet_assets
   rack-livereload
   rails (= 4.1.1)

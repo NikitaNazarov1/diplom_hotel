@@ -6,7 +6,7 @@ gem 'rails', '4.1.1'
 
 # Database adapter
 gem 'sqlite3', '~> 1.3.6', groups: [:development, :test]
-gem 'pg', group: :production
+gem 'pg', '~> 0.11', group: :production
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
@@ -61,7 +61,6 @@ gem 'inherited_resources'
 group :production do
   # For deploy to Heroku
   gem 'rails_12factor'
-  gem 'pg'
 end
 
 group :doc do
