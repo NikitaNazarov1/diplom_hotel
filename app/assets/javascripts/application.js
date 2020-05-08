@@ -13,5 +13,3 @@
 
 //= require shared
 //= require_tree ./application
-//= require ./shared.js
-//= require_tree ./admin
