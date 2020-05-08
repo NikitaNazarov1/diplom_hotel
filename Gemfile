@@ -26,7 +26,7 @@ gem 'coffee-script'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
-gem 'jquery-ui-rails'
+gem 'jquery-ui-rails', '4.2.1'
 
 gem 'sugar-rails'
 
@@ -52,7 +52,7 @@ gem 'devise'
 gem 'devise-i18n'
 gem 'cancan'
 
-gem 'enumerize'
+gem 'enumerize', '0.8.0'
 
 gem 'russian'
 
