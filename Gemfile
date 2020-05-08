@@ -5,7 +5,7 @@ ruby '2.1.2'
 gem 'rails', '4.1.1'
 
 # Database adapter
-gem 'sqlite3', groups: [:development, :test]
+gem 'sqlite3', '~> 1.3.6', groups: [:development, :test]
 gem 'pg', group: :production
 
 # Use SCSS for stylesheets
