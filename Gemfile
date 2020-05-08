@@ -61,6 +61,7 @@ gem 'inherited_resources'
 group :production do
   # For deploy to Heroku
   gem 'rails_12factor'
+  gem 'pg'
 end
 
 group :doc do
