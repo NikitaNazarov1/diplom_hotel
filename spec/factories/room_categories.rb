@@ -5,7 +5,7 @@ FactoryGirl.define do
 
     trait :standard do
       name 'Стандарт'
-      price 1000
+      price 100
       description <<-EOS.strip_heredoc
         * Wi-fi
         * Кабельное телевидение
@@ -21,7 +21,7 @@ FactoryGirl.define do
 
     trait :two_rooms do
       name 'Двухкомнатный'
-      price 1500
+      price 150
       description <<-EOS.strip_heredoc
         Площадь номера 50 кв.м. Номер состоит из спальной комнаты с двухместной кроватью (2,0 м х 1,8 м),
         гостиной, просторной ванной комнаты и уютной зоны кухни. Планировка номера и цветовая гамма,
@@ -38,7 +38,7 @@ FactoryGirl.define do
 
     trait :junior do
       name 'Полулюкс'
-      price 2000
+      price 200
       description <<-EOS.strip_heredoc
         * Wi-fi
         * Кабельное телевидение
@@ -55,7 +55,7 @@ FactoryGirl.define do
 
     trait :deluxe do
       name 'Люкс'
-      price 3000
+      price 300
       description <<-EOS.strip_heredoc
         * Wi-fi
         * Кабельное телевидение
