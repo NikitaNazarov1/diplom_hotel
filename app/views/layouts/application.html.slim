@@ -7,14 +7,14 @@ html
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = favicon_link_tag 'hotel-icon.png'
     = csrf_meta_tags
-  body class=([controller_name, action_name])
+  body.background class=([controller_name, action_name])
     .navbar.navbar-fixed-top
       .navbar-inner
         .container-fluid
           ul.nav
             li = link_to 'Номера', root_path
             li = link_to 'Онлайн-бронирование', new_reservation_path
-    .container-fluid.background
+    .container-fluid
       = render 'layouts/messages'
       #content
         = yield

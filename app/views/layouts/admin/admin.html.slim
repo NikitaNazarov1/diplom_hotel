@@ -7,7 +7,7 @@ html
     = javascript_include_tag 'admin', 'data-turbolinks-track' => true
     = favicon_link_tag 'hotel-icon.png'
     = csrf_meta_tags
-  body class=([controller_name, action_name])
+  body.background class=([controller_name, action_name])
     .navbar.navbar-fixed-top
       .navbar-inner
         .container-fluid

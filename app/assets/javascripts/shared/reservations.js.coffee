@@ -1,4 +1,4 @@
-$(document).on 'ready page:load', ->
+$(document).on 'ready page:load turbolinks:load', ->
   if $('body.reservations').filter('.new, .create').length
 
     arrivalDatePicker = new ArrivalDatepicker('reservation_arrival')
