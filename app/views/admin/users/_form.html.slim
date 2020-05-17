@@ -1,6 +1,6 @@
 .row
   .span2
-    = link_to 'Назад', collection_path, class: :btn
+    = link_to 'Назад', collection_path, class: 'btn btn-inverse'
 br
 .row
   .span6
@@ -13,4 +13,4 @@ br
         = f.input :password_confirmation, required: true
         = f.input :role, collection: User::EMPLOYEES_ROLES_FOR_SELECT
 
-      = f.button :submit, 'Сохранить'
+      = f.button :submit, 'Сохранить', class: 'btn btn-primary'

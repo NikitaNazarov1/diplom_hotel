@@ -3,9 +3,9 @@ h1 Список номеров в категории "#{parent}"
 =form_tag destroy_multiple_admin_room_category_rooms_path, method: :delete do
   .row
     .span6
-      = link_to 'Назад', parent_path, class: :btn
+      = link_to 'Назад', parent_path, class: 'btn btn-inverse'
     .span6
-      = submit_tag 'Удалить выбранные номера', class: :btn, data: { confirm: 'Вы действительно хотите удалить выбранные номера?' }
+      = submit_tag 'Удалить выбранные номера', class: 'btn btn-danger', data: { confirm: 'Вы действительно хотите удалить выбранные номера?' }
   br
   .row
     .span12

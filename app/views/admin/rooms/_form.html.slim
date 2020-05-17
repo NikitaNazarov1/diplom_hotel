@@ -1,6 +1,6 @@
 .row
   .span2
-    = link_to 'Назад', parent_path, class: :btn
+    = link_to 'Назад', parent_path, class: 'btn btn-inverse'
 br
 .row
   .span12
@@ -15,4 +15,4 @@ br
         | —
         = f.input :number_range_end, label: false, input_html: { class: 'input-mini' }, error_html: { class: 'lolo' }
 
-      = f.button :submit, 'Сохранить'
+      = f.button :submit, 'Сохранить', class: 'btn btn-primary'

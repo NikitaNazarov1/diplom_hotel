@@ -1,6 +1,6 @@
 .row
   .span2
-    = link_to 'Назад', collection_path, class: :btn
+    = link_to 'Назад', collection_path, class: 'btn btn-inverse'
 br
 .row
   .span6
@@ -37,4 +37,4 @@ br
               = cif.simple_fields_for (:emails) do |ef|
                 = ef.input :address, required: false
 
-      = f.button :submit, 'Сохранить'
+      = f.button :submit, 'Сохранить', class: 'btn btn-primary'

@@ -5,7 +5,7 @@ h1 Брони
       .span10
         .row
           .span10
-            = link_to 'Новая бронь', new_admin_reservation_path, class: :btn
+            = link_to 'Новая бронь', new_admin_reservation_path, class: 'btn btn-primary'
         br
         .row
           .span10
@@ -40,4 +40,4 @@ h1 Брони
             = f.text_field :client_first_name_cont
             = f.label :client_middle_name_cont, 'Отчество'
             = f.text_field :client_middle_name_cont
-          = f.submit 'Поиск', class: :btn
+          = f.submit 'Поиск', class: 'btn btn-primary'

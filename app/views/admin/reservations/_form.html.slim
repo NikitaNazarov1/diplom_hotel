@@ -1,6 +1,6 @@
 .row
   .span2
-    = link_to 'Назад', collection_path, class: :btn
+    = link_to 'Назад', collection_path, class: 'btn btn-inverse'
 br
 .row
   .span12
@@ -10,4 +10,4 @@ br
 
       = render 'reservations/form_fields', form: f
 
-      = f.button :submit, 'Сохранить'
+      = f.button :submit, 'Сохранить', class: 'btn btn-primary'

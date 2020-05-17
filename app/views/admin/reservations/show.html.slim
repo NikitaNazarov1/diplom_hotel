@@ -2,10 +2,10 @@ h1 Данные брони
 
 .row
   .span6
-    = link_to 'Назад', admin_reservations_path, class: :btn
+    = link_to 'Назад', admin_reservations_path, class: 'btn btn-inverse'
   .span6
-    = link_to 'Аннулировать', cancel_admin_reservation_path, class: :btn, data: { confirm: 'Вы действительно хотите аннулировать эту бронь?',  'confirm-proceed-class' => 'btn-danger' }, method: :patch
+    = link_to 'Аннулировать', cancel_admin_reservation_path, class: 'btn btn-danger', data: { confirm: 'Вы действительно хотите аннулировать эту бронь?',  'confirm-proceed-class' => 'btn-danger' }, method: :patch
     - if can?(:create, Accommodation) && @reservation.ready_for_accomodation?
-      = link_to 'Заселить', new_admin_accommodation_path(reservation_id: @reservation.id), class: :btn
+      = link_to 'Заселить', new_admin_accommodation_path(reservation_id: @reservation.id), class: 'btn btn-success'
 br
 = render 'reservations/reservation', reservation: @reservation
