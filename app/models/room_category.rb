@@ -58,12 +58,7 @@ class RoomCategory < ActiveRecord::Base
 
   # Возвращает список номеров, доступных для бронирования или заселения
   def free_rooms(arrival, departure)
-    n_o_rooms = not_occupied_rooms arrival, departure
-    if n_o_rooms.count > reservations.overlapping_with(arrival, departure).count
-      n_o_rooms
-    else
-      Room.none
-    end
+    not_occupied_rooms(arrival, departure)
   end
 
   # Возвращает список номеров, в которых уже кто-то проживает
