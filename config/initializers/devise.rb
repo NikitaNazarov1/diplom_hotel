@@ -121,7 +121,7 @@ Devise.setup do |config|
   # db field (see migrations). Until confirmed new email is stored in
   # unconfirmed email column, and copied to email column on successful confirmation.
   config.reconfirmable = true
-  config.mailer_sender = ENV[‘GMAIL_USERNAME’]
+  config.mailer_sender = 'diploma.fitu@gmail.com'
 
   # Defines which key will be used when confirming an account
   # config.confirmation_keys = [ :email ]
