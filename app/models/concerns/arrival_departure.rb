@@ -14,7 +14,7 @@ module Concerns
       # период проживания у которых пересекается с указанным
       # периодом
       def self.overlapping_with(arrival, departure)
-        where('arrival < ?', departure).where('departure > ?', arrival)
+        where { |q| (q.arrival < departure) & (q.departure > arrival) }
       end
     end
 
