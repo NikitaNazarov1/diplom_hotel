@@ -75,7 +75,6 @@ RubyHotel::Application.configure do
  user_name: 'diploma.fitu@gmail.com',
  password: 'guyyb789',
  authentication: 'plain',
- enable_starttls_auto: true
 }
 
 
