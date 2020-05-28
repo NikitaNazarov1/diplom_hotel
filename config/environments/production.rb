@@ -72,8 +72,8 @@ RubyHotel::Application.configure do
  address: 'smtp.gmail.com',
  port: 25,
  domain: 'heroku.com',
- user_name: ENV['GMAIL_USERNAME'],
- password: ENV['GMAIL_PASSWORD'],
+ user_name: 'diploma.fitu@gmail.com',
+ password: 'guyyb789',
  authentication: 'plain',
  enable_starttls_auto: true
 }

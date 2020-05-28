@@ -38,8 +38,8 @@ RubyHotel::Application.configure do
       port: 587,
       authentication: 'plain',
       enable_starttls_auto: true,
-      user_name: ENV['GMAIL_USERNAME'],
-      password: ENV['GMAIL_PASSWORD'],
+      user_name: 'diploma.fitu@gmail.com',
+      password: 'guyyb789',
       openssl_verify_mode: 'none'
   }
   config.action_mailer.perform_caching = false
