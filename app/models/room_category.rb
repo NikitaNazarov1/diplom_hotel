@@ -35,7 +35,7 @@ class RoomCategory < ActiveRecord::Base
 
   # Возвращает первый свободный номер на указанном периоде
   def free_room(arrival, departure)
-    free_rooms(arrival, departure).first
+    free_rooms(Date.current, departure).first
   end
 
   # Возвращает первый номер из списка забронированных
