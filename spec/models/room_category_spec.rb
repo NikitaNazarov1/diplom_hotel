@@ -41,27 +41,6 @@ describe RoomCategory do
             expect(free_room).to eq second_room
           end
         end
-
-        context 'with one reservation within given period' do
-          before do
-            create(:reservation, room_category: subject, arrival: arrival, departure: departure)
-          end
-
-          it 'returns nil' do
-            expect(free_room).to be_nil
-          end
-        end
-      end
-
-      context 'with two reservations within given period' do
-        before do
-          create(:reservation, room_category: subject, arrival: arrival, departure: departure)
-          create(:reservation, room_category: subject, arrival: arrival, departure: departure)
-        end
-
-        it 'returns nil' do
-          expect(free_room).to be_nil
-        end
       end
     end
   end
