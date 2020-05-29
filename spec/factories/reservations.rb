@@ -2,7 +2,7 @@
 
 FactoryGirl.define do
   factory :reservation do
-    arrival { Date.today }
+    arrival { Date.current }
     departure { arrival + 5.days }
     association :room_category, factory: :room_category_with_rooms
     client

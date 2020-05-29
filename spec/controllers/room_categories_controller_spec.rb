@@ -10,13 +10,4 @@ describe RoomCategoriesController do
     end
   end
 
-  describe "GET 'available_arrival_dates'" do
-    pending do
-      it 'returns http success' do
-        get 'available_arrival_dates'
-        expect(response).to be_success
-      end
-    end
-  end
-
 end

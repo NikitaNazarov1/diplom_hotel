@@ -68,16 +68,6 @@ describe Admin::AccommodationsController do
     end
   end
 
-  describe 'GET edit' do
-    pending do
-      it 'assigns the requested accommodation as @accommodation' do
-        accommodation = Accommodation.create! accommodation_attributes
-        get :edit, {id: accommodation.to_param}, valid_session
-        expect(assigns(:accommodation)).to eq(accommodation)
-      end
-    end
-  end
-
   describe 'POST create' do
     describe 'with valid params' do
       describe 'from reservation' do
@@ -164,52 +154,6 @@ describe Admin::AccommodationsController do
           # Trigger the behavior that occurs when invalid params are submitted
           post :create, invalid_attributes, valid_session
           expect(response).to render_template('new')
-        end
-      end
-    end
-  end
-
-  describe 'PUT update' do
-    pending do
-      describe 'with valid params' do
-        it 'updates the requested accommodation' do
-          accommodation = Accommodation.create! accommodation_attributes
-          # Assuming there are no other accommodations in the database, this
-          # specifies that the Accommodation created on the previous line
-          # receives the :update_attributes message with whatever params are
-          # submitted in the request.
-          allow_any_instance_of(Accommodation).to receive(:update).with({'these' => 'params'})
-          put :update, {id: accommodation.to_param, :accommodation => {'these' => 'params'}}, valid_session
-        end
-
-        it 'assigns the requested accommodation as @accommodation' do
-          accommodation = Accommodation.create! accommodation_attributes
-          put :update, {:id => accommodation.to_param, :accommodation => accommodation_attributes}, valid_session
-          expect(assigns(:accommodation)).to eq(accommodation)
-        end
-
-        it 'redirects to the accommodation' do
-          accommodation = Accommodation.create! accommodation_attributes
-          put :update, {:id => accommodation.to_param, :accommodation => accommodation_attributes}, valid_session
-          expect(response).to redirect_to(accommodation)
-        end
-      end
-
-      describe 'with invalid params' do
-        it 'assigns the accommodation as @accommodation' do
-          accommodation = Accommodation.create! accommodation_attributes
-          # Trigger the behavior that occurs when invalid params are submitted
-          Accommodation.any_instance.stub(:save).and_return(false)
-          put :update, {id: accommodation.to_param, accommodation: {}}, valid_session
-          expect(assigns(:accommodation)).to eq(accommodation)
-        end
-
-        it "re-renders the 'edit' template" do
-          accommodation = Accommodation.create! accommodation_attributes
-          # Trigger the behavior that occurs when invalid params are submitted
-          Accommodation.any_instance.stub(:save).and_return(false)
-          put :update, {id: accommodation.to_param, accommodation: {}}, valid_session
-          expect(response).to render_template('edit')
         end
       end
     end

@@ -47,43 +47,6 @@ describe Admin::RoomsController do
     end
   end
 
-  describe 'POST create' do
-    let(:category) { create(:room_category) }
-    describe 'with valid params' do
-      let(:valid_params) { {rooms_form: {number_range_start: '1', number_range_end: '3'}, room_category_id: category.id} }
-
-      it 'creates a new Rooms' do
-        expect {
-          post :create, valid_params, valid_session
-        }.to change(Room, :count).by(3)
-      end
-
-      it 'assigns a newly created rooms form as @rooms_form' do
-        post :create, valid_params, valid_session
-        expect(assigns(:rooms_form)).to be_a(RoomsForm)
-      end
-
-      it 'redirects to the rooms category' do
-        post :create, valid_params, valid_session
-        expect(response).to redirect_to([:admin, category])
-      end
-    end
-
-    describe 'with invalid params' do
-      let(:invalid_params) { {rooms_form: {number_range_start: 'fef'}, room_category_id: category.id} }
-
-      it 'assigns a newly created but unsaved rooms form as @rooms_form' do
-        post :create, invalid_params, valid_session
-        expect(assigns(:rooms_form)).to be_a(RoomsForm)
-      end
-
-      it "re-renders the 'new' template" do
-        post :create, invalid_params, valid_session
-        expect(response).to render_template('new')
-      end
-    end
-  end
-
   describe 'DELETE destroy_multiple' do
     before { request.env['HTTP_REFERER'] = 'where_i_came_from' }
     let!(:room) { create(:room, category: category)}

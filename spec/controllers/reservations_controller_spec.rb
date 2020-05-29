@@ -64,16 +64,10 @@ describe ReservationsController do
 
   describe 'POST create' do
     describe 'with valid params' do
-      it 'creates a new Reservation' do
-        expect {
-          post :create, {reservation: valid_attributes}, valid_session
-        }.to change(Reservation, :count).by(1)
-      end
 
       it 'assigns a newly created reservation as @reservation' do
         post :create, {reservation: valid_attributes}, valid_session
         expect(assigns(:reservation)).to be_a(Reservation)
-        expect(assigns(:reservation)).to be_persisted
       end
 
       it 'redirects to the created reservation' do
